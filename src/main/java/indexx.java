@@ -10,9 +10,7 @@ import javax.swing.JOptionPane;
  */
 public class indexx extends javax.swing.JFrame {
 
-    /**
-     * Creates new form indexx
-     */
+   
     public indexx() {
         initComponents();
     }
