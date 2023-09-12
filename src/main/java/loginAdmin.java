@@ -2,7 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 /**
  *
  * @author hp
@@ -104,7 +105,14 @@ public class loginAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        if(jTextField1.getText().equals("qems") && jPasswordField1.getText().equals("admin")){
+        setVisible(false);
+        new adminhome().setVisible(true);
+        }
+        else{
+        ImageIcon icon = new ImageIcon("Incorrect Password.png");
+        JOptionPane.showMessageDialog(null, "<html><b style=\"color: red; font-size: 10px\">incorrect<br> Username or Password </b> </html>","Show",JOptionPane.INFORMATION_MESSAGE,icon);
+            }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void backbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbuttonActionPerformed
