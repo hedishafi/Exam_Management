@@ -30,7 +30,7 @@ public class loginAdmin extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jPasswordField1 = new javax.swing.JPasswordField();
         adminpassword = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        checkbox = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
         backbutton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -41,7 +41,7 @@ public class loginAdmin extends javax.swing.JFrame {
 
         adminusername.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         adminusername.setText("Username");
-        getContentPane().add(adminusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 110, 70));
+        getContentPane().add(adminusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 110, 70));
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 260, -1));
 
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -53,15 +53,15 @@ public class loginAdmin extends javax.swing.JFrame {
 
         adminpassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         adminpassword.setText("Password");
-        getContentPane().add(adminpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 135, -1));
+        getContentPane().add(adminpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 135, -1));
 
-        jCheckBox1.setText("Show Password");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        checkbox.setText("Show Password");
+        checkbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                checkboxActionPerformed(evt);
             }
         });
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, -1, 20));
+        getContentPane().add(checkbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, -1, 20));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("Login");
@@ -70,7 +70,7 @@ public class loginAdmin extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 90, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, 90, -1));
 
         backbutton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         backbutton.setText("Back");
@@ -79,7 +79,7 @@ public class loginAdmin extends javax.swing.JFrame {
                 backbuttonActionPerformed(evt);
             }
         });
-        getContentPane().add(backbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 460, -1, 30));
+        getContentPane().add(backbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 460, -1, 30));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setText("Admin Login Page");
@@ -93,9 +93,13 @@ public class loginAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    private void checkboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkboxActionPerformed
+        if(checkbox.isSelected()){
+            jPasswordField1.setEchoChar((char)0);
+        }else {
+            jPasswordField1.setEchoChar('*');
+        }
+    }//GEN-LAST:event_checkboxActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(jTextField1.getText().equals("qems") && jPasswordField1.getText().equals("admin")){
@@ -103,8 +107,8 @@ public class loginAdmin extends javax.swing.JFrame {
         new adminhome().setVisible(true);
         }
         else{
-        ImageIcon icon = new ImageIcon("Incorrect Password.png");
-        JOptionPane.showMessageDialog(null, "<html><b style=\"color: red; font-size: 10px\">incorrect<br> Username or Password </b> </html>","Show",JOptionPane.INFORMATION_MESSAGE,icon);
+        
+        JOptionPane.showMessageDialog(null, "incorrect Username or Password ","Show",JOptionPane.INFORMATION_MESSAGE);
             }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -152,8 +156,8 @@ public class loginAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel adminpassword;
     private javax.swing.JLabel adminusername;
     private javax.swing.JButton backbutton;
+    private javax.swing.JCheckBox checkbox;
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPasswordField jPasswordField1;
