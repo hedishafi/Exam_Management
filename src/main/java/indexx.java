@@ -70,13 +70,14 @@ public class indexx extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(255, 204, 255));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 500));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1000, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminActionPerformed
-        // TODO add your handling code here:
+        setVisible(false);
+        new loginAdmin().setVisible(true);
     }//GEN-LAST:event_adminActionPerformed
 
     private void StudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StudentActionPerformed
