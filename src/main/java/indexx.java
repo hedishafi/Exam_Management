@@ -2,19 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-import javax.swing.JOptionPane;
 
 /**
  *
- * @author HP
+ * @author hp
  */
+import javax.swing.JOptionPane;
 public class indexx extends javax.swing.JFrame {
 
-   
+    /**
+     * Creates new form indexx
+     */
     public indexx() {
         initComponents();
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -24,84 +26,73 @@ public class indexx extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        student = new javax.swing.JButton();
         admin = new javax.swing.JButton();
+        Student = new javax.swing.JButton();
         exit = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        student.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        student.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentedited.png"))); // NOI18N
-        student.setText("Student");
-        student.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                studentActionPerformed(evt);
-            }
-        });
-        getContentPane().add(student, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 150, -1));
-
-        admin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        admin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/admin_1.png"))); // NOI18N
+        admin.setBackground(new java.awt.Color(204, 204, 255));
+        admin.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         admin.setText("Admin");
         admin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 adminActionPerformed(evt);
             }
         });
-        getContentPane().add(admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 150, -1));
+        getContentPane().add(admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 110, -1));
 
-        exit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/exitt.png"))); // NOI18N
-        exit.setText("Exit");
-        exit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                exitMousePressed(evt);
+        Student.setBackground(new java.awt.Color(204, 204, 255));
+        Student.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Student.setText("Student");
+        Student.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StudentActionPerformed(evt);
             }
         });
+        getContentPane().add(Student, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 200, 110, -1));
+
+        exit.setBackground(new java.awt.Color(204, 204, 255));
+        exit.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        exit.setText("Exit");
         exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitActionPerformed(evt);
             }
         });
-        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 150, -1));
+        getContentPane().add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, 110, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sky-blue-hd-background-image-for-banner.jpg"))); // NOI18N
-        jLabel1.setText(" ");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1380, 720));
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel2.setText("Exam Management System");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
+
+        jLabel1.setBackground(new java.awt.Color(255, 204, 255));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void studentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studentActionPerformed
-        
-    }//GEN-LAST:event_studentActionPerformed
-
-    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
-
-        
-    int a = JOptionPane.showConfirmDialog(null, "Exit Application?", "Select", JOptionPane.YES_NO_OPTION);
-    if(a==0){
-        System.exit(0);
-    }else{}
-// TODO add your handling code here: 
-    }//GEN-LAST:event_exitActionPerformed
 
     private void adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_adminActionPerformed
 
-    private void exitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMousePressed
-         
-       
+    private void StudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StudentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StudentActionPerformed
+                            
+    
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        // TODO add your handling code here:
         int a = JOptionPane.showConfirmDialog(null, "Exit Application?", "Select", JOptionPane.YES_NO_OPTION);
     if(a==0){
         System.exit(0);
-    }else{}
-    }//GEN-LAST:event_exitMousePressed
-    
+    }else{
+    }
+    }//GEN-LAST:event_exitActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -138,11 +129,10 @@ public class indexx extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Student;
     private javax.swing.JButton admin;
     private javax.swing.JButton exit;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton student;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
-
-    
 }
